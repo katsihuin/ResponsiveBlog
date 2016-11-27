@@ -1,19 +1,21 @@
 /* Inserta tu codigo aqui */
 *  {
 	outline: 1px solid red;
-}
-body {
 	padding: 0;
 	margin: 0;
-	font-family: Courgette;
+	box-sizing: border-box;
+	-webkit-transition: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
 }
-
-header {
-	background-color: #00001a;
+body {
+	background-color: #250033;
 }
 .container{
-	width: 900px;
+	width: 90%;
 	margin: 0 auto;
+	max-width: 1000px;
+	overflow: hidden;
 }
 .clearfix {
 	display: table;
@@ -23,103 +25,143 @@ header {
 	clear: both;
 }
 
-.logo {
-	height: 40px;
-	width: 20%;
+/* Seccion header */
+header {
+	width: 100%;
+	background-color: #00001a;
+	overflow: hidden;
+	height: 100px;
+	margin-bottom: 40px;
+	z-index: 1000;
 }
-.menu-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+
+header .logo {
+	line-height: 100px;
+	width: 25%;
+	float: left;
+	height: auto;
+	margin-top: 10px;
+}
+
+header .menu_bar {
+	display: none;
+}
+header nav {
 	float: right;
-	height: 40px;
+	line-height: 100px;
+	font-family: Open+Sans;
 }
 
-.menu-list li{
-	display: inline-block;
-	padding-right:10px;
-
-}
-
-.menu-list li a{
-	display: block;
+header nav a {
+	display:inline-block;
+	padding:10px 10px;
+	color: #fff;
+	font-size: 12px;
+	font-family: "arial";
+	font-style: italic;
 	text-decoration: none;
-	color: black;
-	font-size: 13px;
+	line-height: normal;
+	-webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;	
+}
+header nav a:hover {
+	background-color: #ffd27f;
 }
 
 /* Seccion hero */
-
 .hero {
 	background: url(../image/header-image.jpg) no-repeat;
 	background-size: cover;
-	height: 300px;
+	height: 400px;
+	padding-top: 200px;
+		margin-bottom: 40px;
 }
 
 .inner {
-	width: 400px;
+	width: 600px;
 	height: 200px;
 	background-color:#00001a;
+	position: relative;
+	top:50%;
+	transform: translateY(-100%);
+	margin: 0 auto;
+}
+
+.main-title, .sub-title {
 	position: relative;
 	top:50%;
 	transform: translateY(-50%);
 	margin: 0 auto;
 }
-
- .menu-hero {
-	line-height: 200px;
-	vertical-align: middle;
-}	
-
-.menu-hero {
+.main-title {
+	color: #ffd27f;
+	font-size: 80px;
 	text-align: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	height: 40px;
+	font-family: "Courgette";
 }
 
-.titulo {
-	color: #ffd27f;
+.sub-title {
+	color: #fff;
+	font-family: "arial";
+	font-style: italic;
+	font-size: 15px;
+	margin-top: 30px;
+}
+ h4 {
+ 	color: #ffd27f;
 	font-size: 20px;
 	text-align: center;
-}
+	font-family: "Courgette";
+	margin: 10px;
+ }
+ p {
+ 	color: #fff;
+	font-family: "arial";
+	font-style: italic;
+	font-size: 15px;
+	text-align: center;
+ }
 
-.menu-hero li{
-	display: inline-block;
-	padding-right:10px;
-	text-decoration: none;
-	color: white;
-	font-size: 13px;
-
-}
 /* Inicio de Seccion 1 */
-
 .column1, .column2, .column3 {
 	float: left;
+	width: 33.334%;
 	box-sizing: border-box;
-	padding: 10px;
+	
 
 }
 .column1 {
-	width: 33%;
+	padding-right: 5px;
+}
+.column2 {
+	padding-left: 5px;
+	padding-right: 5px;
+
+}
+.column3 {
+	padding-left: 5px;
 }
 
-.subtitle {
+.title {
 	background-color: #00001a;
+	padding: 15px;
+	margin-top: -2px;
 }
 
 .img-responsive {
 	width: 100%;
+	height: auto;
+
 }
 
 /* Inicio de Seccion 2 */
 
-.column2 {
+.column4 {
 	width: 60%;
 }
 
-.column3 {
+.column5 {
 	width: 40%;
 }
 
@@ -151,9 +193,44 @@ footer {
 /* Responsive */
 
 @media screen and (max-width : 920px) {
-
+	header .logo, header nav{
+		width: 100%;
+		text-align: center;
+		line-height: 100px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-
+	header nav {
+		width: 80%;
+		height: 100%;
+		margin: 0;
+		position: fixed;	
+		}
+	header nav a {
+		display: none;
+		float: none;
+		border-bottom: 1px solid rgba(255, 255, 255, .3);
+	}
+	.menu_bar {
+		display: block;
+		width: 100%;
+		background-color: #ccc;
+	}
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		background-color: #00001a;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 25px;
+		-webkit-transition: border-box;
+		-moz-box-sizing:border-box;
+		box-sizing: border-box;
+	}
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
 }
