@@ -254,6 +254,7 @@ footer span{
 	header nav {
 		display: none;
 	}
+
 	.container {
         width: 95%;  
     }
@@ -264,6 +265,7 @@ footer span{
   		position: fixed;
   		top: 0;
   	}
+
   	.menu-bar .bt-menu, .logo {
   		display: block;
   		padding: 20px
@@ -272,22 +274,29 @@ footer span{
   		font-size: 25px;
 		text-decoration: none;
   	}
+
   	.menu-bar span {
   		float: right;
   		font-size: 50px;
   		display: inline-block;
   		padding: 20px 40px 20px 0;
   	}
+
   	.banner .logo {
   		width: 50%;
   		height: auto;
   	}
+
     .inner {
         width: 90%;
     }
 
-  	.hero .inner p, .main-title{
-         margin: 0;
+    .main-title{
+    	font-size: 50px;
+    }
+
+    .hero .inner p {
+    	font-size: 15px;
     }
 
     .column1, .column2, .column3, .column4, .column5 {
@@ -295,6 +304,7 @@ footer span{
         width: 100%;
         padding: 0;
     }
+
    .column5 {
    		display: none;
    }
